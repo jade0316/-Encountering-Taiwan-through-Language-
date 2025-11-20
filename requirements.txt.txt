@@ -1,4 +1,0 @@
-streamlit
-azure-cognitiveservices-speech
-audio-recorder-streamlit
-numpy
