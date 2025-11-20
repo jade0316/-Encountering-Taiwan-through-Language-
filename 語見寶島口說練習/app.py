@@ -2,6 +2,8 @@ import streamlit as st
 import os
 import time
 import random
+import sys         
+import subprocess
 # --- 🚑 緊急修復：強迫安裝套件 ---
 try:
     import audio_recorder_streamlit
@@ -256,3 +258,4 @@ if 'result' in st.session_state:
     else:
 
         st.success("👍 說得不錯！")
+
