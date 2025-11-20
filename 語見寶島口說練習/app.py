@@ -17,7 +17,7 @@ except ImportError:
     audio_recorder = None
 
 # --- 頁面設定 ---
-st.set_page_config(page_title="華語文口說評測教練", page_icon="🇹🇼", layout="centered")
+st.set_page_config(page_title="《語見寶島》口說練習", layout="centered")
 
 # CSS 優化
 st.markdown(
@@ -145,7 +145,7 @@ vocab_database = {
 }
 
 # --- 主頁面邏輯 ---
-st.title("🇹🇼 華語文互動式教材")
+st.title("《語見寶島》口說練習")
 st.divider()
 
 lesson_options = list(vocab_database.keys())
@@ -241,3 +241,4 @@ if 'result' in st.session_state:
     c1.markdown(f"<div style='text-align:center'><h3>準確度</h3><h2 style='color:#555'>{accuracy:.0f}</h2></div>", unsafe_allow_html=True)
     c2.markdown(f"<div style='text-align:center'><h3>流暢度</h3><h2 style='color:#555'>{fluency:.0f}</h2></div>", unsafe_allow_html=True)
     c3.markdown(f"<div style='text-align:center'><h3>完整度</h3><h2 style='color:#555'>{completeness:.0f}</h2></div>", unsafe_allow_html=True)
+
