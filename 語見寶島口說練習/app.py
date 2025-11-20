@@ -2,7 +2,13 @@ import streamlit as st
 import os
 import time
 import random
-
+# --- 🚑 緊急修復：強迫安裝套件 ---
+try:
+    import audio_recorder_streamlit
+except ImportError:
+    st.warning("正在安裝錄音元件，請稍候... (首次執行需要約 1 分鐘)")
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "audio-recorder-streamlit"])
+    import audio_recorder_streamlit
 # 嘗試匯入 Azure SDK
 try:
     import azure.cognitiveservices.speech as speechsdk
@@ -248,4 +254,5 @@ if 'result' in st.session_state:
         st.balloons()
         st.success("🎉 **完美！** 發音非常標準！")
     else:
+
         st.success("👍 說得不錯！")
