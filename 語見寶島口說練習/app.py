@@ -145,7 +145,7 @@ vocab_database = {
 }
 
 # --- 主頁面邏輯 ---
-st.title("《語見寶島》口說練習")
+st.title("《語見寶島：臺灣生活華語與實務》口說練習")
 st.divider()
 
 lesson_options = list(vocab_database.keys())
@@ -241,5 +241,6 @@ if 'result' in st.session_state:
     c1.markdown(f"<div style='text-align:center'><h3>準確度</h3><h2 style='color:#555'>{accuracy:.0f}</h2></div>", unsafe_allow_html=True)
     c2.markdown(f"<div style='text-align:center'><h3>流暢度</h3><h2 style='color:#555'>{fluency:.0f}</h2></div>", unsafe_allow_html=True)
     c3.markdown(f"<div style='text-align:center'><h3>完整度</h3><h2 style='color:#555'>{completeness:.0f}</h2></div>", unsafe_allow_html=True)
+
 
 
